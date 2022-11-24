@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0","pyodbc>=4.0.34","redis>=3.5.3","python-dotenv>=0.20.0","requests>=2.22.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "site24x7"
+version = "0.5.5"
+authors = [
+  { name="Renas Mirkan Kilic", email="mirkanbaba1@gmail.com" },
+]
+description = "plugin integration tool"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/mirkan1/site24x7"
+"Bug Tracker" = "https://github.com/mirkan1/site24x7/issues"

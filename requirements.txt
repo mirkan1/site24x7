@@ -1,0 +1,4 @@
+pyodbc==4.0.34
+redis==3.5.3
+python-dotenv>=0.20.0
+requests>=2.22.0

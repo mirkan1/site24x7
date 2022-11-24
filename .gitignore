@@ -1,0 +1,7 @@
+__pycache__
+*.cronjob
+dist
+*.env
+.vscode
+*.egg-info
+.venv
