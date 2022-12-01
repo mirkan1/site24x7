@@ -4,4 +4,4 @@ dist
 *.env
 .vscode
 *.egg-info
-.venv
+.venv*

@@ -108,3 +108,18 @@ console.log(fs.readFileSync('/tmp/testplugin.cache', 'utf8'))
 ```bash
 cat /opt/site24x7/monagent/temp/ignored_plugins.txt
 ```
+
+### site24x7 zoho api
+```python
+from site24x7.utils.zoho import ZohoConnection
+
+_client_id = "xxx"
+_client_secret = "xxx"
+code ="xxx"
+zoho = ZohoConnection(_client_id, _client_secret, code=code)
+print(zoho.headers)
+zoho.get_current_status_all()
+get = zoho.get('/api/current_status')
+for i in zoho.get_up_monitors():
+    print(i['name'], i['status'])
+```

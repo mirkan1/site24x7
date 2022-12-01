@@ -4,11 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "site24x7"
-version = "0.5.5"
+version = "0.6.0"
 authors = [
   { name="Renas Mirkan Kilic", email="mirkanbaba1@gmail.com" },
 ]
-description = "plugin integration tool"
+description = "plugin integration and zoho authentication 2.0 tool"
 readme = "README.md"
 license = { file="LICENSE" }
 requires-python = ">=3.6"

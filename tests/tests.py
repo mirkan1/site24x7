@@ -1,9 +1,10 @@
-from site24x7_plugin_helper.connector.redis_client import RedisClient
-from site24x7_plugin_helper.connector.database_client import DatabaseClient
-from site24x7_plugin_helper.connector.cache_client import CacheClient
-from site24x7_plugin_helper.connector.request_client import RequestClient
-from site24x7_plugin_helper.utils.util import *
 from time import sleep
+import pytest
+from site24x7.connector.redis_client import RedisClient
+from site24x7.connector.database_client import DatabaseClient
+from site24x7.connector.cache_client import CacheClient
+from site24x7.connector.request_client import RequestClient
+from site24x7.utils.util import *
 
 
 def testRedisClient():
