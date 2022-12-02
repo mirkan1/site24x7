@@ -232,12 +232,24 @@ class ZohoConnection:
         self.DEVICE_KEY = self.get_device_key()
 
     def get_device_key(self):
-        ''' Get device key from site24x7 
+        ''' Get device key from site24x7
             *This function is still in development. '''
         url = '/api/device_key'
         response = self.get(url)
         print("get_device_key", response)
         return response['data']['device_key']
+
+    def poll_monitor(self, monitor_id):
+        ''' Poll a monitor. Initializes polling and returns the status of polling '''
+        url = f'/api/monitor/poll_now/{monitor_id}'
+        response = self.get(url)
+        return response['data']['status']
+
+    def poll_status(self, monitor_id):
+        ''' Get the status of polling '''
+        url = f'/api/monitor/status_poll_now/{monitor_id}'
+        response = self.get(url)
+        return response['data']['status']
 
 if __name__ == '__main__':
     _client_id = "xxx"
