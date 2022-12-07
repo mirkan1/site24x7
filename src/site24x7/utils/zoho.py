@@ -17,7 +17,15 @@ current_status_type = [
     'status',
 ]
 class ZohoConnection:
-    ''' Oath2.0 authentication flow for Zoho API '''
+    ''' Zoho connection class for Oath2.0 authentication workflow
+        :param client_id: Zoho client id
+        :param client_secret: Zoho client
+        :param code: Zoho authorization code
+        :param refresh_token: Zoho refresh token
+        :param access_token: Zoho access token
+        :param cache: Use cache file, default True, if False will ignore cache file.
+            cache will be saved into .cache after each refresh or authorization code function
+    '''
     MONITOR_GRUPS = {}
     MONITORS = {}
     MSP_CUSTOMERS = {}
