@@ -1,3 +1,9 @@
+<img width="300" src="//imgur.com/a/ExPIKla" alt="logo" />
+<hr/>
+[![Build Status](https://img.shields.io/pypi/v/site24x7.svg)](https://pypi.org/project/site24x7/)
+[![Build Status](https://img.shields.io/pypi/pyversions/site24x7.svg)](https://pypi.org/project/site24x7/)
+[![Build Status](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
 # Description
 This repository is dedicaded to ease plugin integrations for site24x7. It contains a set of plugins that can be used to monitor your infrastructure. and in order to install it you need to write below command into your terminal.
 
