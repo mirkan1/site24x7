@@ -1,0 +1,1 @@
+@03/01/2023: Added new feature on *set_dict_using_global_selector* to set a value with given as_type parameter for redis client class

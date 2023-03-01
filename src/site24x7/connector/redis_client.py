@@ -31,11 +31,20 @@ class RedisClient(ClientModel):
         ''' Get all the values in a hash '''
         return self.redis.hgetall(array_name)
 
-    def set_dict_using_global_selector(self, global_selector:str, array_name:str, set_item_key:str):
+    def set_dict_using_global_selector(self, global_selector:str, array_name:str, set_item_key:str, set_as:str="string"):
         ''' Set a key/value pair into the main dictionary '''
         array = self.hgetall(array_name)
         for key in array:
             if key.startswith(global_selector):
-                self.__setitem__(set_item_key, array[key])
+                if set_as == "string":
+                    self.__setitem__(set_item_key, array[key])
+                elif set_as == "int":
+                    self.__setitem__(set_item_key, int(array[key]))
+                elif set_as == "float":
+                    self.__setitem__(set_item_key, float(array[key]))
+                elif set_as == "bool":
+                    self.__setitem__(set_item_key, bool(array[key]))
+                else:
+                    raise ValueError("Invalid set_as value")
                 return
         raise KeyError("Key not found")
