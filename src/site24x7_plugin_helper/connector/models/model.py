@@ -108,14 +108,15 @@ class ClientModel(ABC):
         ''' calculate the total of all metrics without base values '''
         total = 0
         for key, value in self.dict.items():
+            base_value_found = False
             for i in self.base_values_list:
                 if key == i:
-                    continue
-                else:
-                    try:
-                        total += int(value)
-                    except ValueError:
-                        pass
+                    base_value_found = True
+            if not base_value_found:
+                try:
+                    total += int(value)
+                except ValueError:
+                    pass
         self.__setitem__('total', total)
         return total
 
