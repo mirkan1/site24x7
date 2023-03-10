@@ -1,5 +1,6 @@
-<img width="300" src="https://i.imgur.com/dpa0Zzg.png" alt="logo" />
-
+<div style="border: 5px solid black; margin: auto; width: 280px; height:280px; padding: 8px;">
+    <img src="https://i.imgur.com/dpa0Zzg.png" alt="logo" />
+</div>
 <hr/>
 
 [![Build Status](https://img.shields.io/pypi/v/site24x7.svg)](https://pypi.org/project/site24x7/) [![Build Status](https://img.shields.io/pypi/pyversions/site24x7.svg)](https://pypi.org/project/site24x7/) [![Build Status](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
