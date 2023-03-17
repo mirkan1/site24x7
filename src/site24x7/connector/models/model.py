@@ -104,10 +104,19 @@ class ClientModel(ABC):
         metric_units = guessMetricByType({}, self.dict)
         self.__setitem__('units', metric_units)
 
-    def calculate_total_without_base_values(self) -> str:
-        ''' calculate the total of all metrics without base values '''
+    def calculate_total_without_base_values(self, excludes=[]) -> int:
+        """_summary_
+
+        Args:
+            excludes (list, optional): Add the parameter you want not to exists in total value. Defaults to [].
+
+        Returns:
+            int: total of all the values in the dictionary
+        """
         total = 0
         for key, value in self.dict.items():
+            if key in excludes:
+                continue
             base_value_found = False
             for i in self.base_values_list:
                 if key == i:
